@@ -1,0 +1,107 @@
+@import "~bootstrap/scss/bootstrap";
+
+:root{
+    --blue-color: #001632;
+    --red-color: #F31C19;
+    --gray-color: #f8f9fa;
+    --lightred-color: rgb(243, 28, 25, 0.6);
+}
+
+body{
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.blue-bg{
+    background-color: var(--blue-color);
+}
+
+header.blue-bg,
+nav.blue-bg{
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.red-bg{
+    background-color: var(--red-color);
+}
+
+.rounded-pill{
+    color: black;
+}
+
+.red-hover:hover{
+    background-color: var(--lightred-color);
+    color: white;
+}
+
+.red-font{
+    color: var(--red-color)
+}
+
+.gray-bg{
+    background-color: var(--gray-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+        max-width: 100px;
+}
+
+.appear-768{
+    display: none;
+}
+
+
+
+#user-info-popup{
+    background-color: rgb(130, 130, 130, 0.3);
+    width: 100vw;
+    height: calc(100vh + 6rem);
+    z-index: 9998;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    
+    #popup-block{
+        background-color: white;
+        box-shadow: 0 0 10px 5px rgb(0, 0, 0, 0.5);
+        padding: 0 1rem;
+        width: 20rem;
+        height: 20rem;
+        z-index: 9999;
+        position: absolute;
+        top: 40vh;
+        right: 30vw;
+        
+        i{
+            position: relative;
+            top: 0.5rem;
+            left: 17rem;
+            color: red;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .appear-768{
+        display: inline-block;
+    }
+
+    .disappear-768{
+        display: none;
+    }
+
+    #user-info-popup{
+        #popup-block{
+            right: 40vw;
+        } 
+    }
+}
